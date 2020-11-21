@@ -47,6 +47,10 @@ const appRoutes: Routes = [
         loadChildren: './main/angular-material-elements/angular-material-elements.module#AngularMaterialElementsModule'
     },
     {
+        path        : 'agencies',
+        loadChildren: './main/agencies/agencies.module#AgenciesModule'
+    },
+    {
         path        : 'properties',
         loadChildren: './main/properties/properties.module#PropertiesModule'
     },

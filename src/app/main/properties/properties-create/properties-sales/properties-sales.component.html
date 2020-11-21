@@ -1,0 +1,55 @@
+<form fxLayout="column" fxLayoutAlign="start" [formGroup]="form">
+
+    <div fxLayout="row" fxLayout.xs="column" class="mt-4" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Price</mat-label>
+            <input placeholder="Price" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Price per m2 built</mat-label>
+            <input placeholder="Price per m2 built" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Previous price</mat-label>
+            <input placeholder="Previous price" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Average price</mat-label>
+            <input placeholder="Average price" matInput formControlName="reference">
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Recommended price</mat-label>
+            <input placeholder="Recommended price" matInput formControlName="reference">
+        </mat-form-field>
+        <section fxFlex="20" fxFlex.xs="100" class="mb-4">
+            <mat-slide-toggle formControlName=reference>
+                Price On Demand
+            </mat-slide-toggle>
+        </section>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Total commission %</mat-label>
+            <input placeholder="Total commission %" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Commission</mat-label>
+            <input placeholder="Commission" matInput formControlName="reference">
+        </mat-form-field>
+
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Own commission %</mat-label>
+            <input placeholder="Own commission %" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Own commission value</mat-label>
+            <input placeholder="Own commission value" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="17" class="pr-4" fxFlex="100">
+            <mat-label>Commission Notes</mat-label>
+            <textarea placeholder="Commission Notes" formControlName="commission_notes" matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>

@@ -1,0 +1,59 @@
+<form fxLayout="column" fxLayoutAlign="start" [formGroup]="form">
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Building Style</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    Building Style
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Bedrooms</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    Bedrooms
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Bathrooms</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    Bathrooms
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Living rooms</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    Living rooms
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Toilets</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    Toilets
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Plot m2</mat-label>
+            <input placeholder="Plot m2" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Built m2</mat-label>
+            <input placeholder="Built m2" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Useful Area m2</mat-label>
+            <input placeholder="Useful Area m2" matInput formControlName="reference">
+        </mat-form-field>
+    </div>
+</form>

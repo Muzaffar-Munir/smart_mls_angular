@@ -1,0 +1,17 @@
+<form fxLayout="column" fxLayoutAlign="start" [formGroup]="form">
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto" class="mt-4">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Own commission %</mat-label>
+            <input placeholder="Own commission %" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Own commission value</mat-label>
+            <input placeholder="Own commission value" matInput formControlName="reference">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="17" class="pr-4" fxFlex="100">
+            <mat-label>Commission Notes</mat-label>
+            <textarea placeholder="Commission Notes" formControlName="commission_notes" matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>

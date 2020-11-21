@@ -30,12 +30,12 @@ export const navigation: FuseNavigation[] = [
                 ]
             },
             {
-                id       : 'calendar',
-                title    : 'Calendar',
+                id       : 'properties',
+                title    : 'Properties',
                 translate: 'NAV.CALENDAR',
                 type     : 'item',
                 icon     : 'today',
-                url      : '/apps/calendar'
+                url      : '/properties'
             },
             {
                 id       : 'e-commerce',

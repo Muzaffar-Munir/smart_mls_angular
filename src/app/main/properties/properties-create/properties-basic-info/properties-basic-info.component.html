@@ -1,0 +1,258 @@
+<form fxLayout="column" fxLayoutAlign="start" [formGroup]="form">
+    <div class="mt-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Reference</mat-label>
+            <input placeholder="Reference" matInput formControlName="reference">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>External Reference</mat-label>
+            <input placeholder="External Reference" matInput formControlName="external_reference">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Other Reference</mat-label>
+            <input placeholder="Other Reference" matInput formControlName="agency_reference">
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Listing Agency</mat-label>
+            <mat-select matSelect formControlName="listing_agency">
+                <mat-option>
+                    agency
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Listing Agent</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    agency
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Offices</mat-label>
+            <mat-select matSelect formControlName="listing_agent">
+                <mat-option>
+                    offices
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <section class="mb-16 px-4" fxLayoutAlign="center center" fxLayoutAlign.xs="start center" fxFlex="25" fxFlex.xs="100">
+            <mat-slide-toggle formControlName="own">
+                Own
+            </mat-slide-toggle>
+        </section>
+        <section [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}" class="mb-16 px-4" fxLayoutAlign.xs="start center" fxLayoutAlign="center center" fxFlex="25" fxFlex.xs="100">
+            <mat-slide-toggle formControlName="exclusive">
+                Exclusive
+            </mat-slide-toggle>
+        </section>
+        <section class="mb-16 px-4" fxLayoutAlign="center center" fxLayoutAlign.xs="start center" fxFlex="25" fxFlex.xs="100">
+            <mat-slide-toggle formControlName="mls">
+                MLS
+            </mat-slide-toggle>
+        </section>
+        <section class="mb-16 px-4" fxLayoutAlign="center center" fxLayoutAlign.xs="start center" fxFlex="25" fxFlex.xs="100">
+            <mat-slide-toggle formControlName="featured">
+                Featured
+            </mat-slide-toggle>
+        </section>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="33" fxFlex.xs="100" class="px-4">
+            <mat-label>Type One</mat-label>
+            <mat-select matSelect formControlName="type_one">
+
+                <mat-option>
+                    type1
+                </mat-option>
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear type" (click)="form.get('type_one').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" fxFlex.xs="100" class="px-4">
+            <mat-label>Type two</mat-label>
+            <mat-select matSelect formControlName="type_two">
+                <mat-option>
+                    type2
+                </mat-option>
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear type" (click)="form.get('type_two').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="33" fxFlex.xs="100" class="px-4">
+            <mat-label>currency</mat-label>
+            <mat-select matSelect formControlName="currency">
+                <mat-option value="EUR">EUR</mat-option>
+                <mat-option value="GBP">GBP</mat-option>
+                <mat-option value="USD">USD</mat-option>
+                <mat-option value="AED">AED</mat-option>
+                <mat-option value="JPY">JPY</mat-option>
+                <mat-option value="TRY">TRY</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+
+        <mat-form-field appearance="outline" fxFlex="34" class="px-4">
+            <mat-label>Listed Unitll</mat-label>
+            <input (click)="listed_until.open()" readonly placeholder="Listed Unitll" matInput formateDatepicker [matDatepicker]="listed_until" formControlName="listed_until">
+            <mat-datepicker-toggle matSuffix [for]="listed_until"></mat-datepicker-toggle>
+            <mat-datepicker #listed_until></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="33" fxFlex.xs="100" class="px-4">
+            <mat-label>Status</mat-label>
+            <mat-select matSelect formControlName="status">
+                <mat-option value="Active">Active</mat-option>
+                <mat-option value="Under Offer">Inactive</mat-option>
+
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear value" (click)="form.get('status').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex.xs="100" fxFlex="33" class="px-4" *ngIf="form.get('type_one').value!=67">
+            <mat-label>Occupancy Status</mat-label>
+            <mat-select matSelect formControlName="occupancy_status">
+                <mat-option value="Occupied">Occupied</mat-option>
+                <mat-option value="Not occupied">Not Occupied</mat-option>
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear" (click)="form.get('occupancy_status').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="20" fxFlex.xs="100" class="px-4">
+            <mat-label>Year Built</mat-label>
+            <mat-select matSelect formControlName="year_built">
+                <mat-option *ngFor="let item of years" [value]='item'>
+                    {{item}}
+                </mat-option>
+                <mat-option value="Pre 150" id="Pre 150">Pre 150s</mat-option>
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear value" (click)="form.get('year_built').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="20" fxFlex.xs="100" class="px-4">
+            <mat-label>Year Reformed</mat-label>
+            <mat-select matSelect formControlName="year_reformed">
+                <mat-option *ngFor="let item of years" [value]='item'>
+                    {{item}}
+                </mat-option>
+                <mat-option value="Pre 150" id="Pre 150">Pre 150s</mat-option>
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear value" (click)="form.get('year_reformed').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="100" class="px-4">
+            <mat-label>Property Name</mat-label>
+            <input placeholder="Property Name" matInput formControlName="property_name">
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="100" class="px-4">
+            <mat-label>Address</mat-label>
+            <input placeholder="Address" matInput formControlName="property_name">
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+
+        <mat-form-field appearance="outline" fxFlex="20" class="px-4">
+            <mat-label>Country</mat-label>
+            <mat-select matSelect formControlName="address_country">
+                <mat-option>
+                    Country
+                </mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="20" class="px-4">
+            <mat-label>Regions</mat-label>
+            <mat-select formControlName="region">
+                <mat-option>
+                    Regions
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>City</mat-label>
+            <mat-select formControlName="address_province">
+                <mat-option>
+                    City
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" formGroupName="private_info_object" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <div formGroupName="agency_id" fxLayout.xs="column" fxLayoutAlign.xs="start stretch" fxLayout="row" fxFlex="100">
+            <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+                <mat-label>Postal Code</mat-label>
+                <input placeholder="Postal Code" formControlName="address_postal_code" matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+                <mat-label>Street</mat-label>
+                <input placeholder="Street" formControlName="address_street" matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+                <mat-label>Street Number</mat-label>
+                <input placeholder="Street Number" formControlName="address_street_number" matInput>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+                <mat-label>Apartment no</mat-label>
+                <input placeholder="Apartment no" formControlName="apartment_no" matInput>
+            </mat-form-field>
+        </div>
+    </div>
+    <div fxLayout="row" formGroupName="floors" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto" *ngIf="form.get('type_one').value!=67">
+        <mat-form-field appearance="outline" fxFlex="50" class="px-4">
+            <mat-label>Total Floors</mat-label>
+            <input placeholder="Total Floors" formControlName="total_floors" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="50" class="px-4">
+            <mat-label>Floor</mat-label>
+            <input placeholder="floor" formControlName="floor" matInput>
+        </mat-form-field>
+    </div>
+
+
+
+
+
+    <!-- <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="start stretch" fxFlex="1 0 auto">
+
+        <mat-form-field appearance="outline" fxFlex="20" fxFlex.xs="100" class="px-4" *ngIf="form.get('type_one').value!=67">
+            <mat-label>Legal status</mat-label>
+            <mat-select matSelect formControlName="license_first_occuption">
+                <mat-option>
+                    Licences
+                </mat-option>
+            </mat-select>
+            <mat-icon matSuffix style="cursor: pointer;" matTooltip="Clear value" (click)="form.get('license_first_occuption').setValue('')">
+                clear
+            </mat-icon>
+        </mat-form-field>
+
+        </div> -->
+</form>

@@ -23,7 +23,7 @@ import { LayoutModule } from 'app/layout/layout.module';
 
 const appRoutes: Routes = [
     {
-        path        : 'dashboard',
+        path        : 'apps',
         loadChildren: './main/apps/apps.module#AppsModule'
     },
     {
@@ -45,6 +45,10 @@ const appRoutes: Routes = [
     {
         path        : 'angular-material-elements',
         loadChildren: './main/angular-material-elements/angular-material-elements.module#AngularMaterialElementsModule'
+    },
+    {
+        path        : 'properties',
+        loadChildren: './main/properties/properties.module#PropertiesModule'
     },
     {
         path      : '**',

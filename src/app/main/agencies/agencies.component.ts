@@ -9,7 +9,7 @@ export class AgenciesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): any {
   }
 
 }

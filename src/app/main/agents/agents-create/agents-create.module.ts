@@ -1,29 +1,29 @@
 import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 import { FuseSharedModule } from './../../../../@fuse/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AgenciesCreateComponent } from './agencies-create.component';
-import { AgencyContactComponent } from './agency-contact/agency-contact.component';
-import { AgencyFiscalDataComponent } from './agency-fiscal-data/agency-fiscal-data.component';
+import { AgentsCreateComponent } from './agents-create.component';
+import { AgentsContactComponent } from './agents-contact/agents-contact.component';
+import { AgentsOtherDataComponent } from './agents-other-data/agents-other-data.component';
 
 
 
 @NgModule({
-  declarations: [AgenciesCreateComponent, AgencyContactComponent, AgencyFiscalDataComponent],
+  declarations: [AgentsCreateComponent, AgentsContactComponent, AgentsOtherDataComponent],
   imports: [
     CommonModule,
     FuseSharedModule,
     MatTabsModule,
-    MatIconModule,
+    MatIconModule, 
     MatButtonModule,
-    MatInputModule,
     MatFormFieldModule,
+    MatInputModule,
     MatSelectModule
   ]
 })
-export class AgenciesCreateModule { }
+export class AgentsCreateModule { }

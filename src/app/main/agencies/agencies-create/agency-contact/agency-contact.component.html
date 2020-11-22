@@ -1,0 +1,95 @@
+<form fxLayout="column" fxLayoutAlign="start" [formGroup]="form">
+    <div class="mt-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Country code</mat-label>
+            <input placeholder="Country code" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Phone</mat-label>
+            <input placeholder="Phone" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Fax</mat-label>
+            <input placeholder="Fax" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Email</mat-label>
+            <input placeholder="Email" matInput formControlName="country_code">
+        </mat-form-field>
+    </div>
+    <div class="mt-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <div fxFlex="25" fxLayoutAlign="center center" fxFlex.xs="100" class="px-4">
+            <!-- <mat-label>CRM Logo</mat-label> -->
+            <input type="file" name="dp" accept=".png, .jpg, .jpeg" #imgFileInput>
+        </div>
+        <div fxFlex="25" fxLayoutAlign="center center" fxFlex.xs="100" class="px-4">
+            <!-- <mat-label>Agency Logo</mat-label> -->
+            <input type="file" name="ap" accept=".png, .jpg, .jpeg" #imgFileInputs>
+        </div>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Owner Name</mat-label>
+            <input placeholder="Owner Name" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Owner Phone</mat-label>
+            <input placeholder="Owner Phone" matInput formControlName="country_code">
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="30" class="px-4">
+            <mat-label>Owner Email</mat-label>
+            <input placeholder="Owner Email" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="70" class="pr-4" fxFlex="100">
+            <mat-label>Complete Address</mat-label>
+            <textarea placeholder="Complete Address" formControlName="country_code" matInput></textarea>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Country</mat-label>
+            <mat-select matSelect formControlName="address_country">
+                <mat-option>
+                    Country
+                </mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Regions</mat-label>
+            <mat-select formControlName="region">
+                <mat-option>
+                    Regions
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>City</mat-label>
+            <mat-select formControlName="province">
+                <mat-option>
+                    City
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Postal code</mat-label>
+            <input placeholder="Postal code" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Street</mat-label>
+            <input placeholder="Street" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Street No.</mat-label>
+            <input placeholder="Street No." matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Comments</mat-label>
+            <textarea placeholder="Comments" formControlName="country_code" matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>

@@ -1,0 +1,86 @@
+<form fxLayout="column" fxLayoutAlign="start" [formGroup]="form">
+    <div class="mt-4" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>First Name</mat-label>
+            <input placeholder="First Name" matInput formControlName="first_name">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Last Name</mat-label>
+            <input placeholder="Phone" matInput formControlName="last_name">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Phone</mat-label>
+            <input placeholder="Phone" matInput formControlName="phone">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Email</mat-label>
+            <input placeholder="Email" matInput formControlName="email">
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <div fxFlex="25" fxLayoutAlign="center center" fxFlex.xs="100" class="px-4 ml-20">
+            <input type="file" name="dp" accept=".png, .jpg, .jpeg" #imgFileInput>
+        </div>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Office Phone</mat-label>
+            <input placeholder="Office Phone" matInput formControlName="office_phone">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Reports to</mat-label>
+            <input placeholder="Reports to" matInput formControlName="reports_to">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Complete Address</mat-label>
+            <textarea placeholder="Reports to" matInput formControlName="reports_to"></textarea>
+            <!-- <input placeholder="Reports to" matInput formControlName="reports_to"> -->
+        </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Country</mat-label>
+            <mat-select matSelect formControlName="address_country">
+                <mat-option>
+                    Country
+                </mat-option>
+
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>Regions</mat-label>
+            <mat-select formControlName="region">
+                <mat-option>
+                    Regions
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex="33" class="px-4">
+            <mat-label>City</mat-label>
+            <mat-select formControlName="province">
+                <mat-option>
+                    City
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="start top" fxFlex="1 0 auto">
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Postal code</mat-label>
+            <input placeholder="Postal code" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Street</mat-label>
+            <input placeholder="Street" matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Street No.</mat-label>
+            <input placeholder="Street No." matInput formControlName="country_code">
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="25" class="px-4">
+            <mat-label>Comments</mat-label>
+            <textarea placeholder="Comments" formControlName="country_code" matInput></textarea>
+        </mat-form-field>
+    </div>
+</form>

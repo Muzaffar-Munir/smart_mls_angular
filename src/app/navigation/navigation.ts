@@ -25,6 +25,14 @@ export const navigation: FuseNavigation[] = [
                 url      : '/agencies'
             },
             {
+                id       : 'agents',
+                title    : 'Agents',
+                translate: 'NAV.CALENDAR',
+                type     : 'item',
+                icon     : 'today',
+                url      : '/agents'
+            },
+            {
                 id       : 'properties',
                 title    : 'Properties',
                 translate: 'NAV.CALENDAR',

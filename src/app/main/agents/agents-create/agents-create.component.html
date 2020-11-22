@@ -23,15 +23,15 @@
                 <div fxLayout="column" fxLayoutAlign="start start" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
 
                     <div class="h2">
-                        New Agency
+                        New agents
                     </div>
                     <div class="subtitle secondary-text">
-                        <span>Agency Detail</span>
+                        <span>agents Detail</span>
                     </div>
                 </div>
             </div>
             <!-- / APP TITLE -->
-            <button mat-raised-button class="save-product-button" [disabled]="agency.invalid || agency.pristine" (click)="saveAgency()">
+            <button mat-raised-button class="save-product-button" [disabled]="agents.invalid || agents.pristine" (click)="saveAgents()">
                 <span>SAVE</span>
             </button>
         </div>
@@ -47,11 +47,11 @@
                 <mat-tab-group fxFlex="100">
 
                     <mat-tab label="Contact" fxFlex="50">
-                        <app-agency-contact [form]="agency"></app-agency-contact>
+                        <app-agents-contact [form]="agents"></app-agents-contact>
                     </mat-tab>
 
-                    <mat-tab label="Fiscal Data" fxFlex="50">
-                        <app-agency-fiscal-data [form]="agency"></app-agency-fiscal-data>
+                    <mat-tab label="Other Data" fxFlex="50">
+                        <app-agents-other-data [form]="agents"></app-agents-other-data>
                     </mat-tab>
 
 

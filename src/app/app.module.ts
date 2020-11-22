@@ -51,6 +51,10 @@ const appRoutes: Routes = [
         loadChildren: './main/agencies/agencies.module#AgenciesModule'
     },
     {
+        path        : 'agents',
+        loadChildren: './main/agents/agents.module#AgentsModule'
+    },
+    {
         path        : 'properties',
         loadChildren: './main/properties/properties.module#PropertiesModule'
     },

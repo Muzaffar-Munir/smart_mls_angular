@@ -1,19 +1,17 @@
 import { fuseAnimations } from './../../../@fuse/animations/index';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
-
 export interface Transaction {
     item: string;
     cost: number;
   }
 @Component({
-  selector: 'app-agencies',
-  templateUrl: './agencies.component.html',
-  styleUrls: ['./agencies.component.scss'],
+  selector: 'app-agents',
+  templateUrl: './agents.component.html',
+  styleUrls: ['./agents.component.scss'],
   animations: fuseAnimations,
   encapsulation: ViewEncapsulation.None
 })
-export class AgenciesComponent implements OnInit {
+export class AgentsComponent implements OnInit {
     displayedColumns: string[] = ['item', 'cost'];
     transactions: Transaction[] = [
       {item: 'Beach ball', cost: 4},
@@ -27,14 +25,7 @@ export class AgenciesComponent implements OnInit {
 
   ngOnInit(): any {
   }
-  
   getTotalCost(): any {
     return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
   }
-//   ngOnDestroy(): void
-//   {
-//       // Unsubscribe from all subscriptions
-//       this._unsubscribeAll.next();
-//       this._unsubscribeAll.complete();
-//   }
 }

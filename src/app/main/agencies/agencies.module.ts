@@ -1,3 +1,6 @@
+import { MatTableModule } from '@angular/material/table';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { AgenciesRoutingModule } from './agencies-routing.module';
 import { AgenciesCreateModule } from './agencies-create/agencies-create.module';
 import { FuseSharedModule } from './../../../@fuse/shared.module';
@@ -13,6 +16,9 @@ import { AgenciesComponent } from './agencies.component';
     CommonModule,
     FuseSharedModule,
     AgenciesRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
     AgenciesCreateModule
   ]
 })
